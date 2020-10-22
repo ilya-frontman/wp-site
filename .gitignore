@@ -12,6 +12,7 @@ db/*
 !/app/wp-content/themes/*
 /app/wp-content/themes/twentynineteen
 /app/wp-content/themes/twentyseventeen
+/app/wp-content/themes/twentytwenty
 /app/wp-content/themes/index.php
 
 
