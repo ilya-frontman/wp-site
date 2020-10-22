@@ -1,0 +1,26 @@
+# wp settings
+*.log
+db/*
+/app/wp-admin/*
+/app/wp-content/languages/*
+/app/wp-content/plugins/*
+/app/wp-content/upgrade/*
+/app/wp-content/index.php
+
+
+# work area and save default theme
+!/app/wp-content/themes/*
+/app/wp-content/themes/twentynineteen
+/app/wp-content/themes/twentyseventeen
+/app/wp-content/themes/index.php
+
+
+# wp cms files
+app/wp-includes/*
+app/*.php
+app/*.txt
+app/*.html
+app/*.htaccess
+
+# res files (img, docs)
+/wordpress/app/wp-content/uploads/*

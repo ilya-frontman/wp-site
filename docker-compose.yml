@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wp
+    ports:
+      - "80:80"
+    env_file: 
+      - ./env/wp.env
+    volumes:
+      - ./app/:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    container_name: db
+    ports:
+      - "3306:3306"
+    env_file: 
+      - ./env/db.env
+    volumes:
+      - ./db/:/var/lib/mysql
+
+  adm:
+    image: adminer:latest
+    container_name: adm
+    ports:
+        - "8080:8080"
+    env_file: 
+      - ./env/adm.env
+    links:
+        - db
